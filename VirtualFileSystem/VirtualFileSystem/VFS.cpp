@@ -359,10 +359,12 @@ UFDTArr[i].ptrfiletable->WriteOffset=0;
 }
 else if(mode == READ)
 UFDTArr[i].ptrfiletable->ReadOffset=0;
+  
 else if(mode == WRITE)
 UFDTArr[i].ptrfiletable->WriteOffset=0;
+  
 UFDTArr[i].ptrfiletable->ptrinode = temp;
-(UFDTArr[i].ptrfiletable->ptrinode->ReferenCount)--;
+(UFDTArr[i].ptrfiletable->ptrinode->ReferenCount)++;
 return i;
 
 }
