@@ -272,7 +272,7 @@ int fd =0;
 fd = GetFDFromName(name);
 if(fd == -1)
 return -1;
-(UFDTArr[fd].ptrfiletable->ptrinode->FileType)--;
+(UFDTArr[fd].ptrfiletable->ptrinode->LinkCount)--;
 if(UFDTArr[fd].ptrfiletable->ptrinode->LinkCount == 0)
 {
 UFDTArr[fd].ptrfiletable->ptrinode->FileType =0;
