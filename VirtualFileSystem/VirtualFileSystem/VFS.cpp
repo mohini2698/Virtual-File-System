@@ -614,7 +614,7 @@ else if(count==2)
 if(_stricmp(command[0],"stat")==0)
 {
 ret=stat_file(command[1]);
-if(ret==1)
+if(ret==-1)
 {
 printf("\nError:Incorrect parameter \n");
 }
@@ -625,7 +625,7 @@ continue;
 else if(_stricmp(command[0],"fstat")==0)
 {
 ret=fstat_file(atoi(command[1]));
-if(ret==1)
+if(ret==-1)
 {
 printf("\nError:Incorrect parameter \n");
 }
@@ -710,7 +710,7 @@ continue;
 }
 else if(_stricmp(command[0],"open")==0)
 {
-ret=createFile(command[1],atoi(command[2]));
+ret=OpenFile(command[1],atoi(command[2]));
 if(ret>=0)
 printf("file successfully open with file descriptor :%d \n",ret);
 if(ret ==-1)
